@@ -1,0 +1,47 @@
+/* General styles for the form */
+form p {
+    margin-bottom: 1rem;
+}
+
+form input {
+    width: 100%;
+    padding: 0.65rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    background-color: #f8f9fa;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #495057;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Button styles */
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+}
+
+/* Alert styles */
+.alert {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Spinner styles */
+.spinner-border {
+    vertical-align: middle;
+}

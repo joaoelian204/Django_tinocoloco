@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container text-center my-5">
+
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="{% static 'css/hero_cards.css' %}">
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div>
+            <h1>¡Tu Fiesta, Tu Estilo, Tu Locura!</h1>
+            <p>Hacemos tus sueños realidad, creando eventos inolvidables llenos de magia y diversión.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Cards Section -->
+<div class="container my-5">
+    <div class="card-grid">
+        <!-- Evento Corporativo -->
+        <a href="{% url 'lista_servicios' %}" class="card">
+            <img src="https://th.bing.com/th/id/R.0eda4815651b827aa8264abfe518c3a7?rik=Dgak5fQQwMiPzQ&pid=ImgRaw&r=0" alt="Evento Corporativo">
+            <div class="card-body">
+                <h5 class="card-title">Eventos Corporativos</h5>
+                <p class="card-text">Diseñamos reuniones y conferencias con profesionalismo y elegancia.</p>
+            </div>
+        </a>
+
+        <!-- Bodas -->
+        <a href="{% url 'lista_servicios' %}" class="card">
+            <img src="https://th.bing.com/th/id/R.31f479d8b4e0cb63b060e408f09c4a5b?rik=Ho4PLNGsBxDEBQ&pid=ImgRaw&r=0" alt="Bodas">
+            <div class="card-body">
+                <h5 class="card-title">Bodas</h5>
+                <p class="card-text">Haz que tu día especial sea inolvidable, con cada detalle perfecto.</p>
+            </div>
+        </a>
+
+        <!-- Fiestas Infantiles -->
+        <a href="{% url 'lista_servicios' %}" class="card">
+            <img src="https://www.decoraciondefiestasyeventos.com/img/eventos/fiesta-infantil-nos1.jpg" alt="Fiestas Infantiles">
+            <div class="card-body">
+                <h5 class="card-title">Fiestas Infantiles</h5>
+                <p class="card-text">Momentos mágicos y llenos de alegría para los más pequeños.</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+{% endblock %}
+
+
+

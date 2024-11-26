@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <!-- Botón para volver -->
+            <a href="{% url 'lista_servicios' %}" class="btn btn-outline-secondary mb-3">
+                <i class="fas fa-arrow-left"></i> Volver a Servicios
+            </a>
+
+            <!-- Título -->
+            <h1 class="text-center mb-4">Reservar <span class="text-primary">{{ servicio.nombre }}</span></h1>
+            
+            <!-- Formulario en tarjeta -->
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            {{ form.as_p }}
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Confirmar Reserva</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: var(--color-cerulean, #257180);
+    }
+
+    .card {
+        border-radius: 8px;
+        border: none;
+        padding: 20px;
+    }
+
+    .btn-success {
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 10px 15px;
+    }
+
+    .btn-outline-secondary {
+        display: inline-flex;
+        align-items: center;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+
+    .btn-outline-secondary i {
+        margin-right: 5px;
+    }
+</style>
+{% endblock %}

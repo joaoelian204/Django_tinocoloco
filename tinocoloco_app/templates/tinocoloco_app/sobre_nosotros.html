@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Encabezado -->
+    <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold text-primary">Sobre Nosotros</h1>
+        <p class="text-muted fs-5">Conoce quiénes somos, nuestra historia y nuestro compromiso contigo.</p>
+    </div>
+
+    <!-- Primera sección: Historia -->
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+            <h2 class="fw-bold text-secondary mb-3">Nuestra Historia</h2>
+            <p class="fs-5 text-muted">
+                TinocoLoco nació en 2022 con un sueño: crear eventos que queden grabados para siempre en el corazón de las personas.
+                Desde bodas hasta aniversarios, nuestro compromiso siempre ha sido el mismo: ofrecer calidad, creatividad y atención al detalle.
+            </p>
+            <p class="fs-5 text-muted">
+                Gracias a la confianza de nuestros clientes, hemos crecido para convertirnos en referentes en la organización de eventos sociales,
+                siempre innovando y llevando cada idea a la realidad.
+            </p>
+        </div>
+        <div class="col-md-6 text-center">
+            {% load static %}
+            <img src="{% static 'images/logo.png' %}" alt="Equipo TinocoLoco" class="img-fluid rounded-circle shadow-lg" style="max-width: 300px; height: auto;">
+        </div>
+    </div>
+
+    <!-- Línea divisoria estilizada -->
+    <div class="text-center">
+        <hr class="my-5" style="border: 0; height: 2px; background: #257180; opacity: 0.6;">
+    </div>
+
+    <!-- Segunda sección: Redes Sociales -->
+    <div class="my-5 text-center">
+        <h2 class="fw-bold text-secondary mb-4">Síguenos en Redes Sociales</h2>
+        <p class="fs-5 text-muted mb-4">
+            Comparte con nosotros tus momentos favoritos y mantente al día con nuestras novedades.
+        </p>
+        <div class="d-flex justify-content-center gap-4">
+            <a href="https://www.facebook.com" target="_blank" class="text-primary fs-2" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com" target="_blank" class="text-info fs-2" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="text-danger fs-2" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Línea divisoria estilizada -->
+    <div class="text-center">
+        <hr class="my-5" style="border: 0; height: 2px; background: #257180; opacity: 0.6;">
+    </div>
+
+    <!-- Tercera sección: Registro e inicio de sesión -->
+    <div class="text-center mt-5">
+        <h2 class="fw-bold text-secondary">¡Únete a nuestra comunidad!</h2>
+        <p class="fs-5 text-muted">
+            Queremos ser parte de tus momentos más importantes. 
+            <a href="{% url 'iniciar_sesion' %}" class="text-decoration-none fw-bold text-primary">Inicia Sesión</a> 
+            o 
+            <a href="{% url 'registrarse' %}" class="text-decoration-none fw-bold text-success">Regístrate</a> 
+            para descubrir todo lo que podemos ofrecerte.
+        </p>
+        <a href="{% url 'registrarse' %}" class="btn btn-success btn-lg rounded-pill mt-3 px-5">
+            ¡Regístrate Ahora!
+        </a>
+    </div>
+</div>
+{% endblock %}
+
+
+
+
